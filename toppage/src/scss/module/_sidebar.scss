@@ -1,0 +1,251 @@
+// --- sidebar メイン ---
+.sidebar {
+  @include calc_vw(width, 250);
+  @include calc_vw(padding-left, 25);
+  @include calc_vw(padding-right, 25);
+  background-color: #F8F8F8;
+
+  @include over {
+    width: $sidebar_mw;
+  }
+
+  @include tab {
+    width: 100vw;
+    margin: 0 auto;
+  }
+
+  &_search {
+    width: 100%;
+    border-radius:5px;
+    margin: 8px 0;
+    text-align: center;
+    height: 44px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: .3s;
+    border: 0;
+    @include tab {
+      margin: 30px 0;
+    }
+  }
+
+
+// --- Ranking ---
+  .ranking {
+    @include sidebar_container;
+
+    .ranking_ttl_wrap {
+      @include sidebar_ttl_wrap;
+
+      .ranking_ttl {
+        @include sidebar_ttl;
+      }
+    }
+
+    .ranking_text_wrap {
+      @include sidebar_element_wrap;
+
+      .ranking_text {
+        @include sidebar_element;
+      }
+    }
+  }
+
+
+// --- Categorycontainer ---
+  .category {
+    @include sidebar_container;
+
+    &_ttl_wrap {
+      @include sidebar_ttl_wrap;
+
+      .category_ttl {
+        @include sidebar_ttl;
+      }
+    }
+
+    &_inner {
+      @include sidebar_element_wrap;
+
+      .category-school_wrap {
+        padding: 35px 0 20px;
+
+        .category-school_ttl {
+          @include sidebar-block_ttl;
+        }
+
+        .category-school_list {
+          @include sidebar-block_list;
+
+          .category-school_item {
+            @include sidebar-block_item;
+
+            a {
+              color: #000;
+            }
+          }
+        }
+      }
+
+      .category-self_wrap {
+        padding: 0 0 24px;
+
+        .category-self_ttl {
+          @include sidebar-block_ttl;
+        }
+
+        .category-self_list {
+          @include sidebar-block_list;
+
+          .category-self_item {
+            @include sidebar-block_item;
+            a {
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+// --- recommend ---
+  .recommend {
+    $this:'recommend';
+    @include sidebar_container;
+
+    &_ttl_wrap {
+      @include sidebar_ttl_wrap;
+
+      .#{$this}_ttl {
+        @include sidebar_ttl;
+      }
+    }
+
+    &_text_wrap {
+      @include sidebar_element_wrap;
+
+      .#{$this}_text {
+        @include sidebar_element;
+      }
+    }
+  }
+
+
+// --- tag ---
+  .tag {
+    $this:'tag';
+    @include sidebar_container;
+
+    &_ttl_wrap {
+      @include sidebar_ttl_wrap;
+
+      .#{$this}_ttl {
+        @include sidebar_ttl;
+      }
+    }
+
+    &_link_wrap {
+      @include sidebar_element_wrap;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 29px 9.503% 14px;
+
+      .#{$this}_link_outer {
+        background-color: #F3C969;
+        border-radius:5px;
+        width: 48%;
+        margin-bottom: 17px;
+        text-align: center;
+
+        &:nth-child(odd) {
+          margin-right: 4px;
+        }
+
+        a {
+          font-size: 10px;
+          font-weight: 300;
+          color: #fff;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+
+// --- advertise ---
+  .advertise {
+    @include tab {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-around;
+    }
+    @include sp-small {
+      display: block;
+    }
+
+    &_img_1 {
+      width: 100%;
+      margin-bottom: 27px;
+
+      @include tab {
+        margin-right: 10px;
+      }
+      @include sp-small {
+        margin: 0 auto 27px;
+      }
+    }
+
+    &_img_2 {
+      width: 100%;
+      margin-bottom: 36px;
+
+      @include tab {
+        margin-left: 10px;
+      }
+      @include sp-small {
+        margin: 0 auto 27px;
+      }
+    }
+  }
+
+
+// --- sns ---
+  .sns {
+    padding-bottom: 53px;
+    width: 100%;
+
+    @include tab {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    #facebook_btn {
+      @include sns_btn;
+      background-color: #2F5097;
+    }
+
+    #twitter_btn {
+      @include sns_btn;
+      background-color: #1A95E0;
+    }
+
+    #google_btn {
+      @include sns_btn;
+      background-color: #D34836;
+    }
+
+    #rssfeed_btn {
+      @include sns_btn;
+      background-color: #FF6600;
+    }
+  }
+
+}

@@ -1,0 +1,14 @@
+@import './base/_reset.scss'; //baseファイル
+@import './base/_base.scss';
+
+@import './setting/_setting.scss'; //settingファイル
+
+@import './mixin/_breakpoint.scss'; //mixinファイル
+@import './mixin/_mixin_main.scss';
+@import './mixin/_mixin_sidebar.scss';
+@import './mixin/_mixin_calc.scss';
+
+@import './module/_body.scss'; //moduleファイル
+@import './module/_header.scss';
+@import './module/_main.scss';
+@import './module/_sidebar.scss';

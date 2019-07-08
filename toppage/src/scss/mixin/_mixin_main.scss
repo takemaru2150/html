@@ -1,0 +1,127 @@
+// section
+
+// section_ttl
+@mixin section_ttl {
+  font-size: $fs_ttl_big;
+  font-weight: $fw_ttl_small;
+}
+
+// section_ttl_text
+@mixin section_ttl_text {
+  color: #747373;
+  font-size: $fs_text_big;
+  font-weight: $fw_text_normal;
+  margin: 12px 0;
+}
+
+// sectionTtlDesign_wrap
+@mixin sectionTtlDesign_wrap {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 28px;
+}
+
+// sectionTtl_design0
+@mixin sectionTtl_design0 {
+  @include calc_per(width, 310);
+  height: 7px;
+  background-color: #1D2D44;
+  display: block;
+}
+
+// sectionTtl_design1
+@mixin sectionTtl_design1 {
+  @include calc_per(width, 753);
+  height: 7px;
+  background-color: #D8D8D8;
+  display: block;
+}
+
+
+
+// sectionTop_wrap
+@mixin sectionTop_wrap {
+  // margin-top: 28px;
+  margin-bottom: 47px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  @include sp {
+    display: block;
+  }
+}
+
+// sectionArticle_day
+@mixin sectionArticle_day {
+  font-size: $fs_text_small;
+  font-weight: $fw_text_normal;
+}
+
+// sectionArticle_ttl
+@mixin sectionArticle_ttl {
+  font-size: $fs_ttl_small;
+  font-weight: $fw_ttl_small;
+}
+
+// sectionArticle_text
+@mixin sectionArticle_text {
+  font-size: $fs_text_big;
+  font-weight: $fw_text_normal;
+}
+
+// sectionArticleBtn_wrap
+@mixin sectionArticleBtn_wrap {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+// sectionArticle_btn
+@mixin sectionArticle_btn {
+  font-size: $fs_ttl_small;
+  font-weight: $fw_text_normal;
+  color: #fff;
+  padding: 7px 0;
+  @include calc_vw(width, 119);
+  min-width: 110px;
+  text-align: center;
+  background-color: #F3C969;
+}
+
+// sectionArticleBtn_wrap_span
+@mixin sectionArticleBtn_wrap_span {
+  font-size: $fs_ttl_small;
+  font-weight: $fw_text_normal;
+  color: #747373;
+}// /sectionTop_wrap
+
+
+// sectionBottom_wrap
+@mixin sectionBottom_wrap {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  @include sp {
+    flex-wrap: wrap;
+  }
+}
+
+// sectionBottom_inner
+@mixin sectionBottom_inner ($this_width: 300, $start_num: 3, $last_num: 5) {
+  @include calc_per(width, $this_width);
+  margin-bottom: $sectionBottom_inner_mb;
+  @include tab {
+    @include calc_per(max-width, $this_width);
+    width: 100%;
+  }
+  @include sp {
+    max-width: none;
+    &:nth-child(n+#{$start_num}):nth-child(-n+#{$last_num}) {
+      display: none;
+    }
+  }
+}
+// /sectionBottom_wrap

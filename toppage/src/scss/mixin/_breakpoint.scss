@@ -1,0 +1,38 @@
+// ブレイクポイント
+$over: 1441px;
+$pc: 1031px; // header.scss/gnav/gnav_link
+$tab: 994px;
+$sp: 657px;
+$sp-small: 530px;
+$sp-small-2: 400px;
+
+@mixin over {
+  @media (min-width: ($over)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+@mixin sp-small {
+  @media (max-width: ($sp-small)) {
+    @content;
+  }
+}
+@mixin sp-small-2 {
+  @media (max-width: ($sp-small-2)) {
+    @content;
+  }
+}

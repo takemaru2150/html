@@ -1,0 +1,154 @@
+.header {
+  width: 100%;
+  height: $header_h;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+
+  @include over {
+    width: $hm_outer_mw;
+  }
+
+  &_ttl {
+    font-size: 20px;
+    padding-left: 41px;
+    font-weight: 800;
+
+    @include sp {
+      font-size: 25px;
+    }
+  }
+
+  .gnav_trigger {
+    display: none;
+
+    @include sp {
+      display: inline-block;
+      transition: all .4s;
+      position: absolute;
+      width: 38px;
+      height: 34px;
+      right: 10px;
+      top: 8px;
+
+      &_span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: black;
+        &:nth-of-type(1) {
+          top: 0;
+        }
+        &:nth-of-type(2) {
+          top: 15px;
+        }
+        &:nth-of-type(3) {
+          top: 30px;
+        }
+      }
+
+      &._active {
+        span {
+          &:nth-of-type(1) {
+            -webkit-transform: translateY(15px) rotate(-45deg);
+            transform: translateY(15px) rotate(-45deg);
+          }
+          &:nth-of-type(2) {
+            opacity: 0;
+          }
+          &:nth-of-type(3) {
+            -webkit-transform: translateY(-14px) rotate(45deg);
+            transform: translateY(-14px) rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+    .gnav {
+      background-color: #fff;
+
+      @include tab {
+        margin: 0 auto;
+      }
+
+      @include sp {
+        position: fixed;
+        width: 100vw;
+        height: calc(100vh - #{$header_h});
+        top: $header_h;
+        left: 0;
+        z-index: 5;
+        transform: translateY(-120%);
+        transition: all .5s 0s ease;
+
+        &._active {
+          transform: translateY(0%);
+        }
+      }
+
+      .gnav_list {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: space-between;
+
+        @include sp {
+          display: block;
+          height: calc(100vh - #{$header_h});
+        }
+
+        .gnav_item {
+
+          &:after {
+            content: "/";
+            color: #707070;
+
+            @include sp {
+              content: none;
+            }
+          }
+          &:last-child:after {
+            content: none;
+          }
+
+          .gnav_link {
+            @include calc_vw(padding-left, 48.65);
+            @include calc_vw(padding-right, 48.65);
+            color: #000;
+            font-size: 14px;
+            font-weight: 600;
+
+            &:hover {
+              opacity: 0.5;
+            }
+            @include pc {
+              @include calc_vw(padding-left, 40);
+              @include calc_vw(padding-right, 40);
+            }
+            @include tab {
+              @include calc_vw(padding-left, 30);
+              @include calc_vw(padding-right, 30);            }
+            @include sp {
+              padding: 30px 0;
+              display: block;
+              text-align: center;
+              font-size: 20px;
+              letter-spacing: 5px;
+
+              &:hover {
+                background-color: #C9CCEF;
+                opacity: 0.9;
+              }
+            }
+          }
+        }
+      }
+    }
+}

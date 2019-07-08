@@ -1,0 +1,28 @@
+.body {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  // width: 100vw;
+
+  @include over {
+    width: $body_mw;
+    margin: 0 auto;
+  }
+
+    @include tab {
+      display: block;
+    }
+
+  .hm_outer {
+    @include calc_vw (width, 1140);
+    // width: 79.17%;
+
+    @include over {
+      width: $hm_outer_mw;
+    }
+
+    @include tab {
+      width: 100vw;
+    }
+  }
+}
