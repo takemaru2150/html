@@ -8,8 +8,17 @@
   align-items: center;
   background-color: #fff;
 
+  &._active {
+    position: fixed;
+  }
+
   @include over {
     width: $hm_outer_mw;
+  }
+
+  @include sp {
+    z-index: 10;
+    position: relative;
   }
 
   &_ttl {
@@ -33,7 +42,7 @@
       height: 34px;
       right: 10px;
       top: 8px;
-      z-index: 10;
+      z-index: 15;
 
       &_span {
         display: inline-block;
@@ -83,19 +92,6 @@
 
       @include sp {
         display: none;
-      //   position: fixed;
-      //   width: 100vw;
-      //   // height: calc(100vh - #{$header_h});
-      //   height: 100vh;
-      //   top: 0;
-      //   left: 0;
-      //   z-index: 5;
-      //   transform: translateY(-100%);
-      //   transition: all .5s 0s ease;
-
-      //   &._active {
-      //     transform: translateY(0%);
-      //   }
       }
 
       .gnav_list {
@@ -104,24 +100,11 @@
         display: flex;
         justify-content: space-between;
 
-        // @include sp {
-        //   display: block;
-        //   // height: calc(100vh - #{$header_h});
-        //   height: 100vh;
-        //   &:first-child {
-        //     margin-top: 60px;
-        //   }
-        // }
-
         .gnav_item {
 
           &:after {
             content: "/";
             color: #707070;
-
-            @include sp {
-              content: none;
-            }
           }
           &:last-child:after {
             content: none;
@@ -144,18 +127,6 @@
             @include tab {
               @include calc_vw(padding-left, 30);
               @include calc_vw(padding-right, 30);            }
-            // @include sp {
-            //   padding: 30px 0;
-            //   display: block;
-            //   text-align: center;
-            //   font-size: 20px;
-            //   letter-spacing: 5px;
-
-            //   &:hover {
-            //     background-color: #C9CCEF;
-            //     opacity: 0.9;
-            //   }
-            // }
           }
         }
       }

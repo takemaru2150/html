@@ -1,63 +1,49 @@
-// .gnav_sp_wrap {
-//     display: none;
+.gnav_sp {
+    display: none;
 
-    .gnav_sp {
-        display: none;
-
-        @include sp {
-            background-color: #fff;
-            margin: 0 auto;
-            position: fixed;
-            width: 100vw;
-            // height: calc(100vh - #{$header_h});
-            height: 100vh;
-            top: 0;
-            left: 0;
-            z-index: 5;
-            transform: translateY(-100%);
-            transition: all .5s 0s ease;
-    
-            &._active {
-              transform: translateY(0%);
-            }
-        }
+    @include sp {
+        background-color: #fff;
+        position: fixed;
+        width: 100vw;
+        height: calc(100vh - #{$header_h});
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        transition: all .5s 0s ease;
+        display: block;
         
-        .gnav_sp_list {
-            display: block;
-            // height: calc(100vh - #{$header_h});
-            height: 100vh;
-            &:first-child {
-                margin-top: 60px;
-            }
-            @include sp {
-            }
+        &._active {
+            top: $header_h;
+            z-index: 5;
+            transform: translateY(0%);
+        }
+    }
+    
+    .gnav_sp_list {
+        display: block;
+        height: 100vh;
+        &:first-child {
+            margin-top: 30px;
+        }
 
-            .gnav_sp_item {
-                color: #707070;
+        .gnav_sp_item {
+            color: #707070;
 
-                .gnav_sp_link {
-                    color: #000;
-                    font-size: 14px;
-                    font-weight: 600;
-                    
-                    padding: 30px 0;
-                    display: block;
-                    text-align: center;
-                    font-size: 20px;
-                    letter-spacing: 5px;
-                    &:hover {
-                        opacity: 0.5;
-                        background-color: #C9CCEF;
-                        opacity: 0.9;
-                    }
-
-                    // @include sp {
-
-                    //     &:hover {
-                    //     }
-                    // }
+            .gnav_sp_link {
+                color: #000;
+                font-size: 14px;
+                font-weight: 600;
+                padding: 30px 0;
+                display: block;
+                text-align: center;
+                font-size: 20px;
+                letter-spacing: 5px;
+                &:hover {
+                    opacity: 0.5;
+                    background-color: #C9CCEF;
+                    opacity: 0.9;
                 }
             }
         }
     }
-// }
+}
