@@ -48,7 +48,7 @@
   font-weight: 600;
   width: 100%;
   border-bottom: solid 1px #707070;
-  padding: 0 0 0.88vw 9.2%;
+  padding-bottom: 19.25px;
 }
 
 @mixin sidebar-block_list {
@@ -57,10 +57,11 @@
   display: -ms-flex;
   display: flex;
   flex-wrap: wrap;
-  padding: 19.5px 0 0 3.33vw;
+  padding-top: 19.5px;
+  padding-left: 36px;
 
   @include tab {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 
@@ -87,6 +88,9 @@
   font-weight: 300;
   display: block;
   text-align: center;
+  &:hover {
+    opacity: 0.8;
+  }
 
   @include tab {
     width: 45%;

@@ -1,6 +1,6 @@
 // --- sidebar メイン ---
 .sidebar {
-  @include calc_vw(width, 250);
+  @include calc_vw(width, 300);
   @include calc_vw(padding-left, 25);
   @include calc_vw(padding-right, 25);
   background-color: #F8F8F8;
@@ -72,6 +72,12 @@
 
         .category-school_ttl {
           @include sidebar-block_ttl;
+
+          .fa-pencil-alt {
+            color: #F3C969;
+            font-size: 20px;
+            padding-right: 1rem;
+          }
         }
 
         .category-school_list {
@@ -92,6 +98,12 @@
 
         .category-self_ttl {
           @include sidebar-block_ttl;
+          
+          .fa-pencil-alt {
+            color: #F3C969;
+            font-size: 20px;
+            padding-right: 1rem;
+          }
         }
 
         .category-self_list {

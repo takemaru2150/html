@@ -33,6 +33,7 @@
       height: 34px;
       right: 10px;
       top: 8px;
+      z-index: 10;
 
       &_span {
         display: inline-block;
@@ -55,6 +56,8 @@
       }
 
       &._active {
+        position: fixed;
+
         span {
           &:nth-of-type(1) {
             -webkit-transform: translateY(15px) rotate(-45deg);
@@ -79,18 +82,20 @@
       }
 
       @include sp {
-        position: fixed;
-        width: 100vw;
-        height: calc(100vh - #{$header_h});
-        top: $header_h;
-        left: 0;
-        z-index: 5;
-        transform: translateY(-120%);
-        transition: all .5s 0s ease;
+        display: none;
+      //   position: fixed;
+      //   width: 100vw;
+      //   // height: calc(100vh - #{$header_h});
+      //   height: 100vh;
+      //   top: 0;
+      //   left: 0;
+      //   z-index: 5;
+      //   transform: translateY(-100%);
+      //   transition: all .5s 0s ease;
 
-        &._active {
-          transform: translateY(0%);
-        }
+      //   &._active {
+      //     transform: translateY(0%);
+      //   }
       }
 
       .gnav_list {
@@ -99,10 +104,14 @@
         display: flex;
         justify-content: space-between;
 
-        @include sp {
-          display: block;
-          height: calc(100vh - #{$header_h});
-        }
+        // @include sp {
+        //   display: block;
+        //   // height: calc(100vh - #{$header_h});
+        //   height: 100vh;
+        //   &:first-child {
+        //     margin-top: 60px;
+        //   }
+        // }
 
         .gnav_item {
 
@@ -135,18 +144,18 @@
             @include tab {
               @include calc_vw(padding-left, 30);
               @include calc_vw(padding-right, 30);            }
-            @include sp {
-              padding: 30px 0;
-              display: block;
-              text-align: center;
-              font-size: 20px;
-              letter-spacing: 5px;
+            // @include sp {
+            //   padding: 30px 0;
+            //   display: block;
+            //   text-align: center;
+            //   font-size: 20px;
+            //   letter-spacing: 5px;
 
-              &:hover {
-                background-color: #C9CCEF;
-                opacity: 0.9;
-              }
-            }
+            //   &:hover {
+            //     background-color: #C9CCEF;
+            //     opacity: 0.9;
+            //   }
+            // }
           }
         }
       }
