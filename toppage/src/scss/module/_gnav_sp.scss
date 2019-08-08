@@ -11,10 +11,10 @@
         transform: translateY(-100%);
         transition: all .5s 0s ease;
         display: block;
+        z-index: 5;
         
         &._active {
             top: $header_h;
-            z-index: 5;
             transform: translateY(0%);
         }
     }
