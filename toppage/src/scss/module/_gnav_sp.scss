@@ -12,13 +12,13 @@
         transition: all .5s 0s ease;
         display: block;
         z-index: 5;
-        
+
         &._active {
             top: $header_h;
             transform: translateY(0%);
         }
     }
-    
+
     .gnav_sp_list {
         display: block;
         height: 100vh;
@@ -39,9 +39,9 @@
                 font-size: 20px;
                 letter-spacing: 5px;
                 &:hover {
-                    opacity: 0.5;
-                    background-color: #C9CCEF;
-                    opacity: 0.9;
+                    opacity: .5;
+                    background-color: #c9ccef;
+                    opacity: .9;
                 }
             }
         }

@@ -1,31 +1,19 @@
-@import './base/_reset.scss'; //baseファイル
-@import './base/_base.scss';
+//baseファイル
+@import "./base/_reset.scss";
+@import "./base/_base.scss";
 
-@import './setting/_setting.scss'; //settingファイル
+//settingファイル
+@import "./setting/_setting.scss";
 
-@import './mixin/_breakpoint.scss'; //mixinファイル
-@import './mixin/_mixin_main.scss';
-@import './mixin/_mixin_sidebar.scss';
-@import './mixin/_mixin_calc.scss';
+//mixinファイル
+@import "./mixin/_breakpoint.scss";
+@import "./mixin/_mixin_main.scss";
+@import "./mixin/_mixin_sidebar.scss";
+@import "./mixin/_mixin_calc.scss";
 
-@import './module/_body.scss'; //moduleファイル
-@import './module/_header.scss';
-@import './module/_gnav_sp.scss';
-@import './module/_main.scss';
-@import './module/_sidebar.scss';
-
-// @import './base/reset.scss'; //baseファイル
-// @import './base/base.scss';
-
-// @import './setting/setting.scss'; //settingファイル
-
-// @import './mixin/breakpoint.scss'; //mixinファイル
-// @import './mixin/mixin_main.scss';
-// @import './mixin/mixin_sidebar.scss';
-// @import './mixin/mixin_calc.scss';
-
-// @import './module/body.scss'; //moduleファイル
-// @import './module/header.scss';
-// @import './module/gnav_sp.scss';
-// @import './module/main.scss';
-// @import './module/sidebar.scss';
+//moduleファイル
+@import "./module/_body.scss";
+@import "./module/_header.scss";
+@import "./module/_gnav_sp.scss";
+@import "./module/_main.scss";
+@import "./module/_sidebar.scss";

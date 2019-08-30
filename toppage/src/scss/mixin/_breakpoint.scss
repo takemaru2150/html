@@ -7,32 +7,32 @@ $sp-small: 530px;
 $sp-small-2: 400px;
 
 @mixin over {
-  @media (min-width: ($over)) {
-    @content;
-  }
+    @media (min-width: ($over)) {
+        @content;
+    }
 }
 @mixin pc {
-  @media (max-width: ($pc)) {
-    @content;
-  }
+    @media (max-width: ($pc)) {
+        @content;
+    }
 }
 @mixin tab {
-  @media (max-width: ($tab)) {
-    @content;
-  }
+    @media (max-width: ($tab)) {
+        @content;
+    }
 }
 @mixin sp {
-  @media (max-width: ($sp)) {
-    @content;
-  }
+    @media (max-width: ($sp)) {
+        @content;
+    }
 }
 @mixin sp-small {
-  @media (max-width: ($sp-small)) {
-    @content;
-  }
+    @media (max-width: ($sp-small)) {
+        @content;
+    }
 }
 @mixin sp-small-2 {
-  @media (max-width: ($sp-small-2)) {
-    @content;
-  }
+    @media (max-width: ($sp-small-2)) {
+        @content;
+    }
 }
